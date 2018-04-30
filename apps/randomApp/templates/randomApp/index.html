@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Random Number</title>
+    </head>
+    <body>
+        <h4> Ckick button or reload the page to generate a new random word</h4>
+        <form action = "/process" method = "post">
+            {% csrf_token %}   
+            <input type = "submit" value = "Click me!">
+        </form>
+        
+        <p>{{ request.session.count }}</p>
+        <p>{{ request.session.response }}</p>
+    </body>
+</html>
